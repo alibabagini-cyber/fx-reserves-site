@@ -1,0 +1,417 @@
+{
+ "period": "2026-06",
+ "generated_at": "2026-09-03T16:00:03",
+ "note": "as_of<period 인 국가는 지연 보고(직전 월 값). 금은 시장가치(IMF 템플릿) — 한국은 장부가 보고.",
+ "rows": [
+  {
+   "iso3": "CHN",
+   "name": "중국",
+   "usd_bn": 3416.3,
+   "usd_exact": 3416.3,
+   "as_of": "2026-06",
+   "gold_usd_bn": 303.7,
+   "source": "SAFE 외환보유액(금 제외) https://www.safe.gov.cn/en/DataInterpretation/index.html (2026-06 release, probe 2026-09-03)",
+   "rank": 1
+  },
+  {
+   "iso3": "JPN",
+   "name": "일본",
+   "usd_bn": 1287.5,
+   "usd_exact": 1287.476,
+   "as_of": "2026-06",
+   "gold_usd_bn": 109.5,
+   "source": "IMF IRFCL",
+   "rank": 2
+  },
+  {
+   "iso3": "CHE",
+   "name": "스위스",
+   "usd_bn": 1087.7,
+   "usd_exact": 1087.6778,
+   "as_of": "2026-06",
+   "gold_usd_bn": 134.7,
+   "source": "IMF IRFCL",
+   "rank": 3
+  },
+  {
+   "iso3": "RUS",
+   "name": "러시아",
+   "usd_bn": 720.4,
+   "usd_exact": 720.4473,
+   "as_of": "2026-06",
+   "gold_usd_bn": 299.0,
+   "source": "IMF IRFCL",
+   "rank": 4
+  },
+  {
+   "iso3": "IND",
+   "name": "인도",
+   "usd_bn": 668.6,
+   "usd_exact": 668.5913,
+   "as_of": "2026-06",
+   "gold_usd_bn": 102.6,
+   "source": "IMF IRFCL",
+   "rank": 5
+  },
+  {
+   "iso3": "TWN",
+   "name": "대만",
+   "usd_bn": 597.15,
+   "usd_exact": 597.15,
+   "as_of": "2026-06",
+   "gold_usd_bn": null,
+   "source": "https://www.cbc.gov.tw/en/cp-448-192554-758ef-2.html",
+   "rank": 6
+  },
+  {
+   "iso3": "DEU",
+   "name": "독일",
+   "usd_bn": 534.9,
+   "usd_exact": 534.8679,
+   "as_of": "2026-06",
+   "gold_usd_bn": 433.8,
+   "source": "IMF IRFCL",
+   "rank": 7
+  },
+  {
+   "iso3": "SAU",
+   "name": "사우디아라비아",
+   "usd_bn": 494.6,
+   "usd_exact": 494.6,
+   "as_of": "2026-06",
+   "gold_usd_bn": 0.4,
+   "source": "SAMA Reserve Assets https://www.sama.gov.sa/en-US/Statistics/Indices/D3/Reserve_Assets_Jul_2026.xlsx",
+   "rank": 8
+  },
+  {
+   "iso3": "HKG",
+   "name": "홍콩",
+   "usd_bn": 445.9,
+   "usd_exact": 445.923,
+   "as_of": "2026-06",
+   "gold_usd_bn": 0.3,
+   "source": "IMF IRFCL",
+   "rank": 9
+  },
+  {
+   "iso3": "KOR",
+   "name": "한국",
+   "usd_bn": 427.4,
+   "usd_exact": 427.359,
+   "as_of": "2026-06",
+   "gold_usd_bn": 4.8,
+   "source": "IMF IRFCL",
+   "rank": 10
+  },
+  {
+   "iso3": "SGP",
+   "name": "싱가포르",
+   "usd_bn": 426.2,
+   "usd_exact": 426.2474,
+   "as_of": "2026-06",
+   "gold_usd_bn": 5.8,
+   "source": "IMF IRFCL",
+   "rank": 11
+  },
+  {
+   "iso3": "ITA",
+   "name": "이탈리아",
+   "usd_bn": 412.6,
+   "usd_exact": 412.5725,
+   "as_of": "2026-06",
+   "gold_usd_bn": 317.6,
+   "source": "IMF IRFCL",
+   "rank": 12
+  },
+  {
+   "iso3": "FRA",
+   "name": "프랑스",
+   "usd_bn": 401.4,
+   "usd_exact": 401.3714,
+   "as_of": "2026-06",
+   "gold_usd_bn": 315.6,
+   "source": "IMF IRFCL",
+   "rank": 13
+  },
+  {
+   "iso3": "BRA",
+   "name": "브라질",
+   "usd_bn": 367.6,
+   "usd_exact": 367.558,
+   "as_of": "2026-06",
+   "gold_usd_bn": 22.3,
+   "source": "IMF IRFCL",
+   "rank": 14
+  },
+  {
+   "iso3": "POL",
+   "name": "폴란드",
+   "usd_bn": 293.5,
+   "usd_exact": 293.5028,
+   "as_of": "2026-06",
+   "gold_usd_bn": 81.6,
+   "source": "IMF IRFCL",
+   "rank": 15
+  },
+  {
+   "iso3": "THA",
+   "name": "태국",
+   "usd_bn": 279.2,
+   "usd_exact": 279.2054,
+   "as_of": "2026-06",
+   "gold_usd_bn": 30.2,
+   "source": "IMF IRFCL",
+   "rank": 16
+  },
+  {
+   "iso3": "GBR",
+   "name": "영국",
+   "usd_bn": 276.5,
+   "usd_exact": 276.474,
+   "as_of": "2026-06",
+   "gold_usd_bn": 40.3,
+   "source": "IMF IRFCL",
+   "rank": 17
+  },
+  {
+   "iso3": "MEX",
+   "name": "멕시코",
+   "usd_bn": 271.3,
+   "usd_exact": 271.3229,
+   "as_of": "2026-06",
+   "gold_usd_bn": 15.5,
+   "source": "IMF IRFCL",
+   "rank": 18
+  },
+  {
+   "iso3": "USA",
+   "name": "미국",
+   "usd_bn": 252.3,
+   "usd_exact": 252.3032,
+   "as_of": "2026-06",
+   "gold_usd_bn": 11.0,
+   "source": "IMF IRFCL",
+   "rank": 19
+  },
+  {
+   "iso3": "ISR",
+   "name": "이스라엘",
+   "usd_bn": 238.6,
+   "usd_exact": 238.5607,
+   "as_of": "2026-06",
+   "gold_usd_bn": 0.0,
+   "source": "IMF IRFCL",
+   "rank": 20
+  },
+  {
+   "iso3": "CZE",
+   "name": "체코",
+   "usd_bn": 180.6,
+   "usd_exact": 180.5929,
+   "as_of": "2026-06",
+   "gold_usd_bn": 10.7,
+   "source": "IMF IRFCL",
+   "rank": 21
+  },
+  {
+   "iso3": "TUR",
+   "name": "튀르키예",
+   "usd_bn": 147.4,
+   "usd_exact": 147.426,
+   "as_of": "2026-06",
+   "gold_usd_bn": 94.2,
+   "source": "IMF IRFCL",
+   "rank": 22
+  },
+  {
+   "iso3": "IDN",
+   "name": "인도네시아",
+   "usd_bn": 145.6,
+   "usd_exact": 145.5936,
+   "as_of": "2026-06",
+   "gold_usd_bn": 11.3,
+   "source": "IMF IRFCL",
+   "rank": 23
+  },
+  {
+   "iso3": "MYS",
+   "name": "말레이시아",
+   "usd_bn": 132.6,
+   "usd_exact": 132.5668,
+   "as_of": "2026-06",
+   "gold_usd_bn": 5.8,
+   "source": "IMF IRFCL",
+   "rank": 24
+  },
+  {
+   "iso3": "CAN",
+   "name": "캐나다",
+   "usd_bn": 126.4,
+   "usd_exact": 126.434,
+   "as_of": "2026-06",
+   "gold_usd_bn": 0.0,
+   "source": "IMF IRFCL",
+   "rank": 25
+  },
+  {
+   "iso3": "ESP",
+   "name": "스페인",
+   "usd_bn": 123.0,
+   "usd_exact": 123.0022,
+   "as_of": "2026-06",
+   "gold_usd_bn": 36.5,
+   "source": "IMF IRFCL",
+   "rank": 26
+  },
+  {
+   "iso3": "NLD",
+   "name": "네덜란드",
+   "usd_bn": 113.2,
+   "usd_exact": 113.225,
+   "as_of": "2026-06",
+   "gold_usd_bn": 79.3,
+   "source": "IMF IRFCL",
+   "rank": 27
+  },
+  {
+   "iso3": "DNK",
+   "name": "덴마크",
+   "usd_bn": 108.1,
+   "usd_exact": 108.1112,
+   "as_of": "2026-06",
+   "gold_usd_bn": 8.6,
+   "source": "IMF IRFCL",
+   "rank": 28
+  },
+  {
+   "iso3": "PHL",
+   "name": "필리핀",
+   "usd_bn": 104.7,
+   "usd_exact": 104.7447,
+   "as_of": "2026-06",
+   "gold_usd_bn": 17.2,
+   "source": "IMF IRFCL",
+   "rank": 29
+  },
+  {
+   "iso3": "PER",
+   "name": "페루",
+   "usd_bn": 94.9,
+   "usd_exact": 94.872,
+   "as_of": "2026-06",
+   "gold_usd_bn": 4.5,
+   "source": "IMF IRFCL",
+   "rank": 30
+  },
+  {
+   "iso3": "NOR",
+   "name": "노르웨이",
+   "usd_bn": 91.2,
+   "usd_exact": 91.1718,
+   "as_of": "2026-06",
+   "gold_usd_bn": 0.0,
+   "source": "IMF IRFCL",
+   "rank": 31
+  },
+  {
+   "iso3": "ROU",
+   "name": "루마니아",
+   "usd_bn": 85.8,
+   "usd_exact": 85.7501,
+   "as_of": "2026-06",
+   "gold_usd_bn": 13.4,
+   "source": "IMF IRFCL",
+   "rank": 32
+  },
+  {
+   "iso3": "SWE",
+   "name": "스웨덴",
+   "usd_bn": 74.4,
+   "usd_exact": 74.359,
+   "as_of": "2026-06",
+   "gold_usd_bn": 16.3,
+   "source": "IMF IRFCL",
+   "rank": 33
+  },
+  {
+   "iso3": "ZAF",
+   "name": "남아공",
+   "usd_bn": 74.1,
+   "usd_exact": 74.1154,
+   "as_of": "2026-06",
+   "gold_usd_bn": 16.3,
+   "source": "IMF IRFCL",
+   "rank": 34
+  },
+  {
+   "iso3": "AUS",
+   "name": "호주",
+   "usd_bn": 70.4,
+   "usd_exact": 70.421,
+   "as_of": "2026-06",
+   "gold_usd_bn": 10.3,
+   "source": "IMF IRFCL",
+   "rank": 35
+  },
+  {
+   "iso3": "HUN",
+   "name": "헝가리",
+   "usd_bn": 68.7,
+   "usd_exact": 68.7264,
+   "as_of": "2026-06",
+   "gold_usd_bn": 14.2,
+   "source": "IMF IRFCL",
+   "rank": 36
+  },
+  {
+   "iso3": "COL",
+   "name": "콜롬비아",
+   "usd_bn": 66.3,
+   "usd_exact": 66.3094,
+   "as_of": "2026-06",
+   "gold_usd_bn": 0.6,
+   "source": "IMF IRFCL",
+   "rank": 37
+  },
+  {
+   "iso3": "BEL",
+   "name": "벨기에",
+   "usd_bn": 53.5,
+   "usd_exact": 53.5393,
+   "as_of": "2026-06",
+   "gold_usd_bn": 29.5,
+   "source": "IMF IRFCL",
+   "rank": 38
+  },
+  {
+   "iso3": "CHL",
+   "name": "칠레",
+   "usd_bn": 51.9,
+   "usd_exact": 51.8763,
+   "as_of": "2026-06",
+   "gold_usd_bn": 1.3,
+   "source": "IMF IRFCL",
+   "rank": 39
+  },
+  {
+   "iso3": "EGY",
+   "name": "이집트",
+   "usd_bn": 50.5,
+   "usd_exact": 50.485,
+   "as_of": "2026-05",
+   "gold_usd_bn": 18.8,
+   "source": "IMF IRFCL",
+   "rank": 40
+  },
+  {
+   "iso3": "ARG",
+   "name": "아르헨티나",
+   "usd_bn": 44.9,
+   "usd_exact": 44.8702,
+   "as_of": "2026-06",
+   "gold_usd_bn": 8.0,
+   "source": "IMF IRFCL",
+   "rank": 41
+  }
+ ]
+}

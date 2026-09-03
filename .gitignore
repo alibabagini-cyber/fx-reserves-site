@@ -1,0 +1,6 @@
+site/
+logs/
+raw/snapshots/
+__pycache__/
+*.tmp
+.env

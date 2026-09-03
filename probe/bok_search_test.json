@@ -1,0 +1,246 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<title>한국은행 - 에러페이지 (Error Page)</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+
+	/* font */
+	@font-face {
+		font-family: 'Spoqa Han Sans Neo';
+		src: url('/static/font/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.woff') format('woff');
+		font-weight: 400;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'Spoqa Han Sans Neo';
+		src: url('/static/font/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.woff') format('woff');
+		font-weight: 300;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'Spoqa Han Sans Neo';
+		src: url('/static/font/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.woff') format('woff');
+		font-weight: 500;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'Spoqa Han Sans Neo';
+		src: url('/static/font/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.woff') format('woff');
+		font-weight: 700;
+		font-style: normal;
+	}
+	*{padding: 0;margin: 0; list-style: none; font-style: normal;}
+	body{font-family: "Spoqa Han Sans Neo", "AppleGothic", "맑은 고딕", "돋움", "dotum", Helvetica, Arial, sans-serif; font-size: 16px; background: linear-gradient(0deg, #cbdef6 0%, #cbdef6 100%, #cbdef4);}
+	.errBoxSet {
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.errBox {
+		max-width: 1020px;
+		width: 100%;
+		min-height: 800px;
+		padding: 0 10px;
+	}
+	.icon {
+		width: auto;
+		height: 284px;
+		background: url(/static/guide/comingsoon/warming.png) 0 0 no-repeat;
+		background-position: center center;
+	    background-size: contain;
+		margin: 0 auto 60px;
+	}
+	.s > p:first-of-type {
+		font-weight: 500;
+		font-size: 30px;
+		color: #000e33;
+		text-align: center;
+	}
+	h1 {
+		font-size: 32px;
+		font-weight: 400;
+		margin-bottom: 32px;
+		color: #000e33;
+		text-align: center;
+	}
+	h1 em{
+		font-weight: 500;
+		font-size: 30px;
+		color: #c81720;
+	}
+	p {
+		font-size: 20px;
+		text-align: center;
+	}
+	p + p {
+		margin-top: 20px;
+	}
+	.eng span {
+		display: block;
+		font-size: 20px;
+		color: #000;
+	}
+	/* .eng span:last-of-type {
+		color: #005596;
+	} */
+	.goBtn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 4px 4px;
+		margin-top: 48px;
+	}
+	.goBtn a {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		color: #fff;
+		font-weight: 500;
+		border-radius: 99px;
+		padding: 9px 24px 9px 56px;
+		text-decoration: none;
+		gap: 0 8px;
+	}
+	.goBtn a::before {
+		content: "";
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		top: 50%;
+		left: 24px;
+		transform: translateY(-50%);
+		background: url(/static/portal/img/ico/ico-home-w.svg);
+	}
+	.goBtn a.portal {
+		background: #131547;
+	}
+	.goBtn a.eng {
+		background: #131547;
+	}
+	.goBtn a.imer {
+		background: #005596;
+	}
+	.goBtn a.imerEng {
+		background: #005596;
+	}
+	.goBtn a.museum {
+		background: #2373B0;
+	}
+
+
+	@media screen and (max-width: 750px){
+		.errBox {
+			min-height: auto;
+		}
+		.errBoxSet {
+			height: auto;
+			padding: 60px 0;
+		}
+		.icon {
+			height: 160px;
+			margin-bottom: 32px;
+			background-position: center bottom;
+		}
+		.s > p:first-of-type,
+		h1,
+		h1 em {
+			font-size: 24px;
+			text-align: center;
+		}
+		p {
+			font-size: 16px;
+			text-align: center;
+		}
+		.eng em {
+			font-size: 22px;
+			margin: 36px 0 24px;
+			text-align: center;
+		}
+		.eng span {
+			font-size: 16px;
+			text-align: center;
+		}
+		.goBtn {
+			gap: 8px 4px;
+		}
+		.goBtn a {
+			font-size: 14px;
+			padding: 8px 16px 8px 40px;
+		}
+		.goBtn a::before {
+			left: 16px;
+		}
+	}
+	</style>
+</head>
+
+<body>
+
+<div class="errBoxSet">
+	<div class="errBox">
+		<div class="icon"></div>
+		<div class="s">
+			<p>Page Not Found</p>
+			<h1>죄송합니다. <em>찾을 수 없는 페이지</em>를 요청하셨습니다.</h1>
+			<p>페이지의 주소를 잘못 입력하였거나 <br>홈페이지 개편으로 인해 요청하신 페이지의 주소가 변경되었을 수 있습니다.</p>
+			<p class="mt20">페이지 주소 재확인 또는 개편 홈페이지로 이동 후에 이용하시기 바랍니다. 감사합니다.</p>
+			<!-- <p class="eng">
+				<span>You entered the page address incorrectly, or The address of the page <br> you requested may have changed due to website reorganization.</span>
+				<span>Please re-check the page address or go to the reorganized homepage before using. <br />Thank you.</span>
+			</p> -->
+			<div class="goBtn">
+				<a href="/portal/main/main.do" class="portal">한국은행(국문)</a>
+				<a href="/eng/main/main.do" class="eng">한국은행(영문)</a>
+				<a href="/imer/main/main.do" class="imer">경제연구원(국문)</a>
+				<a href="/imerEng/main/main.do" class="imerEng">경제연구원(영문)</a>
+				<a href="/museum/main/main.do" class="museum">화폐박물관(국문)</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+	
+</footer>
+</body>
+</html>

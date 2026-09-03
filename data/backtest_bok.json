@@ -1,0 +1,128 @@
+{
+ "period": "2026-06",
+ "bok_release": "2026-08-05",
+ "rows": [
+  {
+   "rank": 1,
+   "iso3": "CHN",
+   "name": "중국",
+   "bok": 3416.3,
+   "ours": 3416.3,
+   "diff": 0.0,
+   "source": "SAFE 헤드라인(금 제외) 2026-06",
+   "match": true
+  },
+  {
+   "rank": 2,
+   "iso3": "JPN",
+   "name": "일본",
+   "bok": 1287.5,
+   "ours": 1287.5,
+   "diff": -0.0,
+   "source": "IMF IRFCL65",
+   "match": true
+  },
+  {
+   "rank": 3,
+   "iso3": "CHE",
+   "name": "스위스",
+   "bok": 1087.7,
+   "ours": 1087.7,
+   "diff": -0.0,
+   "source": "IMF IRFCL65",
+   "match": true
+  },
+  {
+   "rank": 4,
+   "iso3": "RUS",
+   "name": "러시아",
+   "bok": 720.4,
+   "ours": 720.4,
+   "diff": 0.0,
+   "source": "IMF IRFCL65",
+   "match": true
+  },
+  {
+   "rank": 5,
+   "iso3": "IND",
+   "name": "인도",
+   "bok": 668.6,
+   "ours": 668.6,
+   "diff": -0.0,
+   "source": "IMF IRFCL65",
+   "match": true
+  },
+  {
+   "rank": 6,
+   "iso3": "TWN",
+   "name": "대만",
+   "bok": 597.2,
+   "ours": 597.1,
+   "diff": -0.1,
+   "source": "CBC 보도자료 2026-06",
+   "match": true
+  },
+  {
+   "rank": 7,
+   "iso3": "DEU",
+   "name": "독일",
+   "bok": 536.3,
+   "ours": 534.9,
+   "diff": -1.4,
+   "source": "IMF IRFCL65",
+   "match": true
+  },
+  {
+   "rank": 8,
+   "iso3": "SAU",
+   "name": "사우디아라비아",
+   "bok": 493.9,
+   "ours": 494.6,
+   "diff": 0.7,
+   "source": "SAMA 2026-06",
+   "match": true
+  },
+  {
+   "rank": 9,
+   "iso3": "HKG",
+   "name": "홍콩",
+   "bok": 445.9,
+   "ours": 445.9,
+   "diff": 0.0,
+   "source": "IMF IRFCL65",
+   "match": true
+  },
+  {
+   "rank": 10,
+   "iso3": "KOR",
+   "name": "한국",
+   "bok": 427.4,
+   "ours": 427.4,
+   "diff": -0.0,
+   "source": "IMF IRFCL65",
+   "match": true
+  },
+  {
+   "rank": 11,
+   "iso3": "SGP",
+   "name": "싱가포르",
+   "bok": 426.2,
+   "ours": 426.2,
+   "diff": 0.0,
+   "source": "IMF IRFCL65",
+   "match": true
+  },
+  {
+   "rank": 12,
+   "iso3": "ITA",
+   "name": "이탈리아",
+   "bok": 412.6,
+   "ours": 412.6,
+   "diff": -0.0,
+   "source": "IMF IRFCL65",
+   "match": true
+  }
+ ],
+ "hit": 12,
+ "summary": "12개국 중 12개국이 0.5% 이내 일치(실행 2026-09-03). 순위 12개 전부 동일. 독일 -1.4B(0.3%)는 Bundesbank 시계열도 534.9로 IMF와 같아 한은 표의 집계 시점 차이로 판단, 사우디 +0.7B(0.15%)는 SAR 3.75 페그 환산 차이."
+}
