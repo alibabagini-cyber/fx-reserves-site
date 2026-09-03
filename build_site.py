@@ -128,7 +128,18 @@ def load():
     if len(months) >= 2:
         prev = json.loads((DATA / f"reserves_{months[-2]}.json").read_text())
     bt = json.loads((DATA / "backtest_bok.json").read_text()) if (DATA / "backtest_bok.json").exists() else None
+    global BOK, KLONG
+    BOK = json.loads((DATA / "bok_latest.json").read_text())["months"] if (DATA / "bok_latest.json").exists() else {}
+    KLONG = json.loads((DATA / "korea_long.json").read_text()) if (DATA / "korea_long.json").exists() else {}
     return latest, kh, ch, gold, months, prev, bt
+BOK, KLONG = {}, {}
+
+def flash_block(per):
+    """한은 발표가 순위 기준월보다 앞서 있으면 속보 타일(순위 미확정 명시)."""
+    if not BOK or max(BOK) <= per: return ""
+    m = max(BOK); cur = BOK[m]["total"]; pv = BOK.get(sorted(BOK)[-2], {}).get("total") if len(BOK) > 1 else None
+    return (f'<div class="tile" style="border-color:#e0a800"><span>속보 · 한국 {kper(m)} (한은 ECOS)</span><b>{fmt(cur*10,1)}억달러</b>'
+            f'<span>전월비 {delta((cur-pv)*10,1) if pv else "—"}억달러 · {kper(m)} 세계 순위는 각국 발표가 모이는 대로 확정</span></div>')
 
 def ranking_table(rows, prev_rows=None, lang="ko", limit=None):
     pm = {r["iso3"]: r for r in (prev_rows or [])}
@@ -154,7 +165,7 @@ def build_home(latest, prev, kh, months):
     pk = next((r for r in prev["rows"] if r["iso3"] == "KOR"), None) if prev else None
     kh_prev = kh[-2]["total"] if len(kh) > 1 else None
     lag = [r["name"] for r in rows if r["as_of"] != per]
-    tiles = f"""<div class="tiles">
+    tiles = f"""<div class="tiles">{flash_block(per)}
 <div class="tile"><span>한국 세계 순위 ({kper(per)})</span><b>{kor['rank']}위</b><span>{'전월 ' + str(pk['rank']) + '위' if pk else '40개국+대만 기준'}</span></div>
 <div class="tile"><span>한국 외환보유액</span><b>{fmt(kor['usd_bn']*10,0)}억달러</b><span>전월비 {delta((kor['usd_bn']-kh_prev)*10, 0) if kh_prev else '—'}억달러</span></div>
 <div class="tile"><span>1위와 격차</span><b>{fmt((rows[0]['usd_bn']-kor['usd_bn'])/1000,2)}조달러</b><span>{esc(rows[0]['name'])} {fmt(rows[0]['usd_bn']*10,0)}억달러</span></div>
@@ -189,10 +200,11 @@ def build_korea(kh, latest):
     tbl = "".join(f'<tr><td>{r["period"]}</td><td>{fmt(r["total"]*10,0)}</td><td>{delta((r["total"]-kh[i-1]["total"])*10) if i>0 else ""}</td><td>{fmt(r["securities"]*10,0)}</td><td>{fmt(r["deposits"]*10,0)}</td><td>{fmt(r["sdr"]*10,0)}</td><td>{fmt(r["gold"]*10,0)}</td></tr>'
                   for i, r in list(enumerate(kh))[-24:][::-1])
     yoy = next((r["total"] for r in kh if r["period"] == f"{int(per[:4])-1}{per[4:]}"), None)
-    body = f"""<h1>한국 외환보유액 — {kper(per)} {fmt(last['total']*10,0)}억달러</h1>
+    body = f"""<h1>한국 외환보유액 — {kper(per)} {fmt(last['total']*10,0)}억달러</h1>{('<div class="tiles">' + flash_block(per) + '</div>') if flash_block(per) else ''}
 <p class="sub">세계 {kor['rank']}위 · 전년동월비 {delta((last['total']-yoy)*10) if yoy else '—'}억달러 · 자료 IMF IRFCL(한국은행 제출분, 한은 발표와 동일)</p>
 <div class="grid2"><div><h2>구성 (10억달러)</h2>{bar_chart(comp)}<p class="note">한국은 금을 매입 당시 장부가(온스당 약 $1,427)로 계상. 시가 환산 시 약 {fmt(last['gold']*10,0)}억 → <a href="/gold/">금 페이지</a>.</p></div>
-<div><h2>2005년 이후 추이</h2>{line_chart([(r['period'], r['total']) for r in kh])}</div></div>
+<div><h2>{'1971년' if KLONG else '2005년'} 이후 추이</h2>{line_chart(sorted(KLONG.items()) if KLONG else [(r['period'], r['total']) for r in kh])}
+<p class="note">{('1997년 12월 ' + fmt(KLONG['1997-12']*10,0) + '억달러(외환위기) → 2008년 11월 ' + fmt(KLONG['2008-11']*10,0) + '억달러(금융위기) → ' + kper(max(KLONG)) + ' ' + fmt(KLONG[max(KLONG)]*10,0) + '억달러. 자료 한국은행 ECOS 732Y001.') if KLONG else ''}</p></div></div>
 <div class="ad">광고</div>
 <h2>최근 24개월 (억달러)</h2><div class="wrap"><table><thead><tr><th>기준월</th><th>총액</th><th>전월비</th><th>유가증권</th><th>예치금</th><th>SDR</th><th>금</th></tr></thead><tbody>{tbl}</tbody></table></div>
 <p><a class="btn" href="/data/korea_history.csv">전체 월별 CSV</a><a class="btn" href="/data/korea_history.json">JSON</a></p>"""
@@ -257,7 +269,7 @@ def build_methodology(bt, latest):
 <li>IMF IRFCL SDMX: <code>https://api.imf.org/external/sdmx/2.1/data/IMF.STA,IRFCL/…</code> (공개, 키 없음)</li>
 <li>대만 CBC: <code>https://www.cbc.gov.tw/en/lp-448-2.html</code> Foreign Exchange Reserves 보도자료</li>
 <li>한국은행 보도자료 "월말 외환보유액" · 중국 SAFE Official Reserve Assets · 사우디 SAMA Monthly Statistics</li></ul>
-<h2>재현</h2><p>수집·집계 코드와 원본 파일(raw)은 공개 저장소에 두고, 매월 수집 원본을 스냅샷으로 보관합니다. 누구나 같은 명령으로 같은 표를 얻을 수 있습니다.</p>
+<h2>재현</h2><p>수집·집계 코드와 원본 파일(raw)은 공개 저장소 <a href="{CFG.get('repo_url','#')}">{esc(CFG.get('repo_url','(준비 중)'))}</a>에 두고, 매일 수집 원본을 스냅샷으로 보관합니다. 누구나 같은 명령으로 같은 표를 얻을 수 있습니다.</p>
 <pre>python3 fetch_reserves.py      # IMF + CBC → data/reserves_YYYY-MM.json
 python3 backtest_bok.py        # 한은 6월표 대조
 python3 build_site.py          # site/</pre>
