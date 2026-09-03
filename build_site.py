@@ -55,8 +55,9 @@ def eper(p): return dt.date(int(p[:4]), int(p[5:]), 1).strftime("End of %B %Y")
 def fmt(v, d=1): return f"{v:,.{d}f}" if v is not None else "—"
 def delta(v, d=1):
     if v is None: return ""
+    if abs(v) < 0.5 * 10 ** -d: v = 0.0  # "-0.0" 방지
     c = "up" if v > 0 else "dn" if v < 0 else ""
-    return f'<span class="{c}">{v:+,.{d}f}</span>'
+    return f'<span class="{c}">{v:+,.{d}f}</span>' if v else f'<span>{0:.{d}f}</span>'
 
 def page(title, body, desc="", path="/", lang="ko", jsonld=None, canonical=None):
     nav = ('<a href="/">순위</a><a href="/korea/">한국</a><a href="/gold/">금</a><a href="/country/">국가별</a>'
