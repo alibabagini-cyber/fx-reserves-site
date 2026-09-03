@@ -27,6 +27,7 @@ LOG=logs/update_$(date +%Y%m%d).log; mkdir -p logs raw/snapshots
   if [ "${1:-}" = "--deploy" ]; then
     set -a; . ~/.secrets/cf_pages.env; set +a
     npx --yes wrangler@3 pages deploy site --project-name "${CF_PAGES_PROJECT:-fx-reserves}" --branch main --commit-dirty=true 2>&1 | tail -3
+    sleep 20; python3 indexnow.py 200   # Bing·네이버 IndexNow 제출
   fi
   echo "== $(date -Is) done"
 } >> "$LOG" 2>&1
