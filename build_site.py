@@ -92,7 +92,7 @@ def line_chart(series, w=800, h=300, ylabel="", labels=None):
     """series=[(period, value)...] 단일 시계열."""
     if not series: return ""
     vals = [v for _, v in series]; lo, hi = min(vals), max(vals); pad = (hi - lo) * 0.08 or 1
-    lo -= pad; hi += pad; L, R, T, B = 60, 16, 14, 30
+    lo = max(0, lo - pad) if lo >= 0 else lo - pad; hi += pad; L, R, T, B = 60, 16, 14, 30
     def x(i): return L + (w - L - R) * i / max(1, len(series) - 1)
     def y(v): return T + (h - T - B) * (hi - v) / (hi - lo)
     pts = " ".join(f"{x(i):.1f},{y(v):.1f}" for i, (_, v) in enumerate(series))
@@ -194,15 +194,16 @@ def build_archive(months):
         body = f'<h1>세계 외환보유액 순위 {kper(m)}</h1><p class="sub">한국 {kor["rank"]}위 · {fmt(kor["usd_bn"]*10,0)}억달러 · 생성 {d["generated_at"][:10]}</p>{ranking_table(d["rows"])}<p class="note">{esc(d["note"])}</p><div class="ad">광고</div>'
         write(f"/ranking/{m}/", page(f"{kper(m)} 세계 외환보유액 순위 | {NAME}", body, f"{kper(m)} 국가별 외환보유액 순위표(IMF 기준). 한국 {kor['rank']}위.", f"/ranking/{m}/"))
 
-def build_korea(kh, latest):
+def build_korea(kh, latest, gold=None):
     last = kh[-1]; per = last["period"]; kor = next(r for r in latest["rows"] if r["iso3"] == "KOR")
+    gk = next((r for r in (gold or {}).get("rows", []) if r["iso3"] == "KOR"), None)
     comp = [("유가증권", last["securities"]), ("예치금", last["deposits"]), ("SDR", last["sdr"]), ("IMF포지션·기타", last["imf_pos_other"]), ("금(장부가)", last["gold"])]
     tbl = "".join(f'<tr><td>{r["period"]}</td><td>{fmt(r["total"]*10,0)}</td><td>{delta((r["total"]-kh[i-1]["total"])*10) if i>0 else ""}</td><td>{fmt(r["securities"]*10,0)}</td><td>{fmt(r["deposits"]*10,0)}</td><td>{fmt(r["sdr"]*10,0)}</td><td>{fmt(r["gold"]*10,0)}</td></tr>'
                   for i, r in list(enumerate(kh))[-24:][::-1])
     yoy = next((r["total"] for r in kh if r["period"] == f"{int(per[:4])-1}{per[4:]}"), None)
     body = f"""<h1>한국 외환보유액 — {kper(per)} {fmt(last['total']*10,0)}억달러</h1>{('<div class="tiles">' + flash_block(per) + '</div>') if flash_block(per) else ''}
 <p class="sub">세계 {kor['rank']}위 · 전년동월비 {delta((last['total']-yoy)*10) if yoy else '—'}억달러 · 자료 IMF IRFCL(한국은행 제출분, 한은 발표와 동일)</p>
-<div class="grid2"><div><h2>구성 (10억달러)</h2>{bar_chart(comp)}<p class="note">한국은 금을 매입 당시 장부가(온스당 약 $1,427)로 계상. 시가 환산 시 약 {fmt(last['gold']*10,0)}억 → <a href="/gold/">금 페이지</a>.</p></div>
+<div class="grid2"><div><h2>구성 (10억달러)</h2>{bar_chart(comp)}<p class="note">한국은 금을 매입 당시 장부가(온스당 약 $1,427)로 계상. 시가 환산 시 약 {fmt(gk['gold_mkt_usd_bn']*10,0) if gk else '—'}억달러 → <a href="/gold/">금 페이지</a>.</p></div>
 <div><h2>{'1971년' if KLONG else '2005년'} 이후 추이</h2>{line_chart(sorted(KLONG.items()) if KLONG else [(r['period'], r['total']) for r in kh])}
 <p class="note">{('1997년 12월 ' + fmt(KLONG['1997-12']*10,0) + '억달러(외환위기) → 2008년 11월 ' + fmt(KLONG['2008-11']*10,0) + '억달러(금융위기) → ' + kper(max(KLONG)) + ' ' + fmt(KLONG[max(KLONG)]*10,0) + '억달러. 자료 한국은행 ECOS 732Y001.') if KLONG else ''}</p></div></div>
 <div class="ad">광고</div>
@@ -388,7 +389,7 @@ def build_static(latest, months, articles):
 
 def main():
     latest, kh, ch, gold, months, prev, bt = load()
-    build_home(latest, prev, kh, months); build_archive(months); build_korea(kh, latest)
+    build_home(latest, prev, kh, months); build_archive(months); build_korea(kh, latest, gold)
     build_countries(latest, ch, gold, "ko"); build_countries(latest, ch, gold, "en"); build_gold(gold, latest)
     build_methodology(bt, latest); build_data(latest, kh, months); build_embed(latest); arts = build_articles(); build_en(latest, prev); build_press(latest, prev, kh)
     build_static(latest, months, arts)
