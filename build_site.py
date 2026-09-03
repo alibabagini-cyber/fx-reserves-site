@@ -63,6 +63,10 @@ def page(title, body, desc="", path="/", lang="ko", jsonld=None, canonical=None)
            '<a href="/articles/">해설</a><a href="/data/">데이터</a><a href="/methodology/">방법론</a><a href="/en/">EN</a>'
            if lang == "ko" else '<a href="/en/">Ranking</a><a href="/en/country/">Countries</a><a href="/data/">Data</a><a href="/methodology/">Methodology (KO)</a><a href="/">한국어</a>')
     ld = f'<script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>' if jsonld else ""
+    # 계정 연동 슬롯(site.json): 서치콘솔·서치어드바이저 소유확인 메타, 애드센스 스크립트 — 값 비면 출력 안 함
+    ld += "".join(f'<meta name="{n}" content="{esc(CFG[k])}">' for k, n in (("google_verify", "google-site-verification"), ("naver_verify", "naver-site-verification")) if CFG.get(k))
+    if CFG.get("adsense_pub"):
+        ld += f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={esc(CFG["adsense_pub"])}" crossorigin="anonymous"></script>'
     foot = ("자료: IMF IRFCL(SDMX), 대만 CBC, 중국 SAFE, 사우디 SAMA, 한국은행. 각 수치의 기준월·출처는 표 안에 표기. "
             "본 사이트는 공식 통계를 재집계한 독립 자료이며 한국은행·IMF와 무관합니다. "
             '<a href="/methodology/">방법론</a> · <a href="/methodology/#errata">정정로그</a> · <a href="/about/">소개</a> · <a href="/privacy/">개인정보</a>'

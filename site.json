@@ -2,5 +2,9 @@
  "site_name": "외환보유액 순위",
  "base_url": "https://fx-reserves.pages.dev",
  "adsense_pub": "",
- "errata": []
+ "errata": [],
+ "google_verify": "",
+ "naver_verify": "",
+ "contact_html": "",
+ "about_html": ""
 }
