@@ -29,6 +29,10 @@ LOG=logs/update_$(date +%Y%m%d).log; mkdir -p logs raw/snapshots
     npx --yes wrangler@3 pages deploy site --project-name "${CF_PAGES_PROJECT:-fx-reserves}" --branch main --commit-dirty=true 2>&1 | tail -3
     sleep 20; python3 indexnow.py 200   # Bing·네이버 IndexNow 제출
   fi
+  # 공개 repo에 일일 데이터 스냅샷 반영(변경 있을 때만)
+  if [ -n "$(git status --porcelain data content site.json 2>/dev/null)" ]; then
+    git add data content site.json && git -c user.name=akkan -c user.email=alibabagini@gmail.com commit -qm "data: $(date +%F) 갱신 (기준월 $after, 한은 $bok_after)" && git push -q origin main && echo "pushed"
+  fi
   echo "== $(date -Is) done"
 } >> "$LOG" 2>&1
 tail -4 "$LOG"
