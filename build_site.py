@@ -380,6 +380,8 @@ def build_static(latest, months, articles):
     (SITE / "rss.xml").write_text(rss, encoding="utf-8")
     (SITE / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "".join(f"<url><loc>{BASE}{u}</loc></url>" for u in sorted(set(URLS))) + "</urlset>", encoding="utf-8")
     (SITE / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {BASE}/sitemap.xml\n")
+    if CFG.get("google_verify_file"):  # Search Console HTML 파일 검증(삭제하면 소유권 해제)
+        (SITE / CFG["google_verify_file"]).write_text(f"google-site-verification: {CFG['google_verify_file']}")
     if CFG.get("indexnow_key"): (SITE / f"{CFG['indexnow_key']}.txt").write_text(CFG["indexnow_key"])
     if CFG.get("adsense_pub"): (SITE / "ads.txt").write_text(f"google.com, {CFG['adsense_pub']}, DIRECT, f08c47fec0942fa0\n")
     for slug, title, txt in [("about", "소개", CFG.get("about_html", "<p>한국은행이 2026년 9월 순위표 공개를 중단한 뒤, IMF와 각국 중앙은행이 공개하는 원자료로 같은 표를 매월 만들어 올립니다. 운영자 연락처는 사이트 설정에서 지정합니다.</p>")),
