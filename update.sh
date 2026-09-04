@@ -4,6 +4,9 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 LOG=logs/update_$(date +%Y%m%d).log; mkdir -p logs raw/snapshots
+# 실패 즉시 알림(침묵 금지) — 어느 단계든 비정상 종료 시 마지막 로그 5줄을 TG로
+trap '[ -x ~/.claude/notify_tg.sh ] && ~/.claude/notify_tg.sh "[외환보유액 사이트] update.sh 실패 $(date +%m/%d\ %H:%M)
+$(tail -5 "$LOG" 2>/dev/null | cut -c1-160)"' ERR
 {
   echo "== $(date -Is) start"
   before=$(python3 -c "import json;print(json.load(open('data/latest.json'))['period'])" 2>/dev/null || echo none)
@@ -32,6 +35,10 @@ LOG=logs/update_$(date +%Y%m%d).log; mkdir -p logs raw/snapshots
   # 공개 repo에 일일 데이터 스냅샷 반영(변경 있을 때만)
   if [ -n "$(git status --porcelain data content site.json 2>/dev/null)" ]; then
     git add data content site.json && git -c user.name=akkan -c user.email=alibabagini@gmail.com commit -qm "data: $(date +%F) 갱신 (기준월 $after, 한은 $bok_after)" && git push -q origin main && echo "pushed"
+  fi
+  # 운영 점검 — 이상 시에만 TG
+  if ! python3 ops_check.py > logs/ops_last.txt 2>&1; then
+    [ -x ~/.claude/notify_tg.sh ] && ~/.claude/notify_tg.sh "$(head -3 logs/ops_last.txt)" || true
   fi
   echo "== $(date -Is) done"
 } >> "$LOG" 2>&1
