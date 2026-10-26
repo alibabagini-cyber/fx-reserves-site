@@ -7,12 +7,24 @@
   "2026-07": [
    3418.8,
    "https://www.safe.gov.cn/en/2026/0807/2449.html"
+  ],
+  "2026-08": [
+   3438.3,
+   "https://www.safe.gov.cn/en/2026/0907/2460.html"
   ]
  },
  "SAU": {
   "2026-06": [
    494.6,
    "https://www.sama.gov.sa/en-US/Statistics/Indices/D3/Reserve_Assets_Jul_2026.xlsx"
+  ],
+  "2026-07": [
+   488.6,
+   "https://www.sama.gov.sa/en-US/Statistics/Indices/D3/International_Reserves_Aug2026.xlsx"
+  ],
+  "2026-08": [
+   487.3,
+   "https://www.sama.gov.sa/en-US/Statistics/Indices/D3/International_Reserves_Sep2026.xlsx"
   ]
  }
 }
