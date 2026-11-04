@@ -1,6 +1,6 @@
 {
  "period": "2026-09",
- "generated_at": "2026-11-03T09:10:10",
+ "generated_at": "2026-11-04T09:10:10",
  "note": "as_of<period 인 국가는 지연 보고(직전 월 값). 금은 시장가치(IMF 템플릿) — 한국은 장부가 보고.",
  "rows": [
   {
@@ -26,10 +26,10 @@
   {
    "iso3": "CHE",
    "name": "스위스",
-   "usd_bn": 1115.3,
-   "usd_exact": 1115.2619,
-   "as_of": "2026-08",
-   "gold_usd_bn": 147.8,
+   "usd_bn": 1078.1,
+   "usd_exact": 1078.1113,
+   "as_of": "2026-09",
+   "gold_usd_bn": 139.8,
    "source": "IMF IRFCL",
    "rank": 3
   },
@@ -166,10 +166,10 @@
   {
    "iso3": "MEX",
    "name": "멕시코",
-   "usd_bn": 266.0,
-   "usd_exact": 265.9706,
-   "as_of": "2026-08",
-   "gold_usd_bn": 17.6,
+   "usd_bn": 265.4,
+   "usd_exact": 265.3529,
+   "as_of": "2026-09",
+   "gold_usd_bn": 16.1,
    "source": "IMF IRFCL",
    "rank": 17
   },
@@ -266,10 +266,10 @@
   {
    "iso3": "DNK",
    "name": "덴마크",
-   "usd_bn": 110.0,
-   "usd_exact": 109.9929,
-   "as_of": "2026-08",
-   "gold_usd_bn": 9.5,
+   "usd_bn": 107.3,
+   "usd_exact": 107.2781,
+   "as_of": "2026-09",
+   "gold_usd_bn": 8.9,
    "source": "IMF IRFCL",
    "rank": 27
   },
