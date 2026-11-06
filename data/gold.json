@@ -1,7 +1,7 @@
 {
  "period": "2026-09",
  "market_px_usd_oz": 4180,
- "n_market_reporters": 20,
+ "n_market_reporters": 21,
  "rows": [
   {
    "iso3": "CHN",
@@ -43,6 +43,19 @@
    "gold_rank": 3
   },
   {
+   "iso3": "IND",
+   "name": "인도",
+   "gold_usd_bn": 106.1,
+   "tonnes": 880.5,
+   "implied_px": 3747,
+   "total": 737.8,
+   "book_value": false,
+   "gold_mkt_usd_bn": 118.3,
+   "total_gold_mkt": 750.0,
+   "total_ex_gold": 631.7,
+   "gold_rank": 4
+  },
+  {
    "iso3": "JPN",
    "name": "일본",
    "gold_usd_bn": 113.6,
@@ -53,7 +66,7 @@
    "gold_mkt_usd_bn": 113.7,
    "total_gold_mkt": 1178.5,
    "total_ex_gold": 1064.8,
-   "gold_rank": 4
+   "gold_rank": 5
   },
   {
    "iso3": "POL",
@@ -66,7 +79,7 @@
    "gold_mkt_usd_bn": 90.4,
    "total_gold_mkt": 295.1,
    "total_ex_gold": 204.7,
-   "gold_rank": 5
+   "gold_rank": 6
   },
   {
    "iso3": "NLD",
@@ -79,7 +92,7 @@
    "gold_mkt_usd_bn": 82.3,
    "total_gold_mkt": 115.8,
    "total_ex_gold": 33.5,
-   "gold_rank": 6
+   "gold_rank": 7
   },
   {
    "iso3": "GBR",
@@ -92,7 +105,7 @@
    "gold_mkt_usd_bn": 41.7,
    "total_gold_mkt": 279.9,
    "total_ex_gold": 238.2,
-   "gold_rank": 7
+   "gold_rank": 8
   },
   {
    "iso3": "SGP",
@@ -105,7 +118,7 @@
    "gold_mkt_usd_bn": 27.4,
    "total_gold_mkt": 454.6,
    "total_ex_gold": 427.2,
-   "gold_rank": 8
+   "gold_rank": 9
   },
   {
    "iso3": "PHL",
@@ -118,7 +131,7 @@
    "gold_mkt_usd_bn": 17.9,
    "total_gold_mkt": 99.6,
    "total_ex_gold": 81.7,
-   "gold_rank": 9
+   "gold_rank": 10
   },
   {
    "iso3": "SWE",
@@ -131,7 +144,7 @@
    "gold_mkt_usd_bn": 16.9,
    "total_gold_mkt": 74.1,
    "total_ex_gold": 57.2,
-   "gold_rank": 10
+   "gold_rank": 11
   },
   {
    "iso3": "ZAF",
@@ -144,7 +157,7 @@
    "gold_mkt_usd_bn": 16.9,
    "total_gold_mkt": 75.4,
    "total_ex_gold": 58.5,
-   "gold_rank": 11
+   "gold_rank": 12
   },
   {
    "iso3": "MEX",
@@ -157,7 +170,7 @@
    "gold_mkt_usd_bn": 16.1,
    "total_gold_mkt": 265.4,
    "total_ex_gold": 249.3,
-   "gold_rank": 12
+   "gold_rank": 13
   },
   {
    "iso3": "KOR",
@@ -170,7 +183,7 @@
    "gold_mkt_usd_bn": 14.0,
    "total_gold_mkt": 449.8,
    "total_ex_gold": 435.8,
-   "gold_rank": 13
+   "gold_rank": 14
   },
   {
    "iso3": "CZE",
@@ -183,7 +196,7 @@
    "gold_mkt_usd_bn": 11.7,
    "total_gold_mkt": 180.1,
    "total_ex_gold": 168.4,
-   "gold_rank": 14
+   "gold_rank": 15
   },
   {
    "iso3": "IDN",
@@ -196,7 +209,7 @@
    "gold_mkt_usd_bn": 11.7,
    "total_gold_mkt": 146.3,
    "total_ex_gold": 134.6,
-   "gold_rank": 15
+   "gold_rank": 16
   },
   {
    "iso3": "AUS",
@@ -209,7 +222,7 @@
    "gold_mkt_usd_bn": 10.7,
    "total_gold_mkt": 76.5,
    "total_ex_gold": 65.8,
-   "gold_rank": 16
+   "gold_rank": 17
   },
   {
    "iso3": "DNK",
@@ -222,7 +235,7 @@
    "gold_mkt_usd_bn": 8.9,
    "total_gold_mkt": 107.3,
    "total_ex_gold": 98.4,
-   "gold_rank": 17
+   "gold_rank": 18
   },
   {
    "iso3": "ARG",
@@ -235,7 +248,7 @@
    "gold_mkt_usd_bn": 8.3,
    "total_gold_mkt": 46.2,
    "total_ex_gold": 37.9,
-   "gold_rank": 18
+   "gold_rank": 19
   },
   {
    "iso3": "MYS",
@@ -248,7 +261,7 @@
    "gold_mkt_usd_bn": 6.0,
    "total_gold_mkt": 131.8,
    "total_ex_gold": 125.8,
-   "gold_rank": 19
+   "gold_rank": 20
   },
   {
    "iso3": "PER",
@@ -261,7 +274,7 @@
    "gold_mkt_usd_bn": 4.7,
    "total_gold_mkt": 91.6,
    "total_ex_gold": 86.9,
-   "gold_rank": 20
+   "gold_rank": 21
   },
   {
    "iso3": "HKG",
@@ -274,7 +287,7 @@
    "gold_mkt_usd_bn": 0.3,
    "total_gold_mkt": 432.9,
    "total_ex_gold": 432.6,
-   "gold_rank": 21
+   "gold_rank": 22
   },
   {
    "iso3": "CHL",
@@ -287,7 +300,7 @@
    "gold_mkt_usd_bn": 0.0,
    "total_gold_mkt": 52.1,
    "total_ex_gold": 52.1,
-   "gold_rank": 22
+   "gold_rank": 23
   }
  ]
 }
