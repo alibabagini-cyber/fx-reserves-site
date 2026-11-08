@@ -1,6 +1,6 @@
 {
  "period": "2026-09",
- "generated_at": "2026-11-07T09:10:31",
+ "generated_at": "2026-11-08T09:10:23",
  "note": "as_of<period 인 국가는 지연 보고(직전 월 값). 금은 시장가치(IMF 템플릿) — 한국은 장부가 보고.",
  "rows": [
   {
@@ -206,8 +206,8 @@
   {
    "iso3": "CZE",
    "name": "체코",
-   "usd_bn": 180.1,
-   "usd_exact": 180.0729,
+   "usd_bn": 179.4,
+   "usd_exact": 179.4484,
    "as_of": "2026-09",
    "gold_usd_bn": 11.7,
    "source": "IMF IRFCL",
