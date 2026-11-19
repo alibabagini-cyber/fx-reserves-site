@@ -1,6 +1,6 @@
 {
  "period": "2026-09",
- "generated_at": "2026-11-18T09:10:20",
+ "generated_at": "2026-11-19T09:10:11",
  "note": "as_of<period 인 국가는 지연 보고(직전 월 값). 금은 시장가치(IMF 템플릿) — 한국은 장부가 보고.",
  "rows": [
   {
@@ -84,16 +84,6 @@
    "rank": 8
   },
   {
-   "iso3": "ITA",
-   "name": "이탈리아",
-   "usd_bn": 447.6,
-   "usd_exact": 447.5564,
-   "as_of": "2026-08",
-   "gold_usd_bn": 351.4,
-   "source": "IMF IRFCL",
-   "rank": 9
-  },
-  {
    "iso3": "KOR",
    "name": "한국",
    "usd_bn": 440.6,
@@ -101,7 +91,7 @@
    "as_of": "2026-09",
    "gold_usd_bn": 4.8,
    "source": "IMF IRFCL",
-   "rank": 10
+   "rank": 9
   },
   {
    "iso3": "FRA",
@@ -111,7 +101,7 @@
    "as_of": "2026-08",
    "gold_usd_bn": 349.2,
    "source": "IMF IRFCL",
-   "rank": 11
+   "rank": 10
   },
   {
    "iso3": "SGP",
@@ -121,7 +111,7 @@
    "as_of": "2026-09",
    "gold_usd_bn": 6.2,
    "source": "IMF IRFCL",
-   "rank": 12
+   "rank": 11
   },
   {
    "iso3": "HKG",
@@ -130,6 +120,16 @@
    "usd_exact": 432.901,
    "as_of": "2026-09",
    "gold_usd_bn": 0.3,
+   "source": "IMF IRFCL",
+   "rank": 12
+  },
+  {
+   "iso3": "ITA",
+   "name": "이탈리아",
+   "usd_bn": 424.5,
+   "usd_exact": 424.4751,
+   "as_of": "2026-09",
+   "gold_usd_bn": 330.2,
    "source": "IMF IRFCL",
    "rank": 13
   },
