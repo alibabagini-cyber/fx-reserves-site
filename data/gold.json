@@ -1,7 +1,7 @@
 {
  "period": "2026-09",
- "market_px_usd_oz": 4188,
- "n_market_reporters": 23,
+ "market_px_usd_oz": 4189,
+ "n_market_reporters": 24,
  "rows": [
   {
    "iso3": "ITA",
@@ -199,6 +199,19 @@
    "gold_rank": 15
   },
   {
+   "iso3": "HUN",
+   "name": "헝가리",
+   "gold_usd_bn": 14.8,
+   "tonnes": 110.0,
+   "implied_px": 4190,
+   "total": 70.5,
+   "book_value": false,
+   "gold_mkt_usd_bn": 14.8,
+   "total_gold_mkt": 70.5,
+   "total_ex_gold": 55.7,
+   "gold_rank": 16
+  },
+  {
    "iso3": "KOR",
    "name": "한국",
    "gold_usd_bn": 4.8,
@@ -209,7 +222,7 @@
    "gold_mkt_usd_bn": 14.1,
    "total_gold_mkt": 449.9,
    "total_ex_gold": 435.8,
-   "gold_rank": 16
+   "gold_rank": 17
   },
   {
    "iso3": "CZE",
@@ -222,7 +235,7 @@
    "gold_mkt_usd_bn": 11.8,
    "total_gold_mkt": 179.5,
    "total_ex_gold": 167.7,
-   "gold_rank": 17
+   "gold_rank": 18
   },
   {
    "iso3": "IDN",
@@ -235,7 +248,7 @@
    "gold_mkt_usd_bn": 11.7,
    "total_gold_mkt": 146.3,
    "total_ex_gold": 134.6,
-   "gold_rank": 18
+   "gold_rank": 19
   },
   {
    "iso3": "AUS",
@@ -248,7 +261,7 @@
    "gold_mkt_usd_bn": 10.8,
    "total_gold_mkt": 76.6,
    "total_ex_gold": 65.8,
-   "gold_rank": 19
+   "gold_rank": 20
   },
   {
    "iso3": "DNK",
@@ -261,7 +274,7 @@
    "gold_mkt_usd_bn": 9.0,
    "total_gold_mkt": 107.4,
    "total_ex_gold": 98.4,
-   "gold_rank": 20
+   "gold_rank": 21
   },
   {
    "iso3": "ARG",
@@ -274,7 +287,7 @@
    "gold_mkt_usd_bn": 8.3,
    "total_gold_mkt": 46.2,
    "total_ex_gold": 37.9,
-   "gold_rank": 21
+   "gold_rank": 22
   },
   {
    "iso3": "MYS",
@@ -287,7 +300,7 @@
    "gold_mkt_usd_bn": 6.0,
    "total_gold_mkt": 131.8,
    "total_ex_gold": 125.8,
-   "gold_rank": 22
+   "gold_rank": 23
   },
   {
    "iso3": "PER",
@@ -300,7 +313,7 @@
    "gold_mkt_usd_bn": 4.7,
    "total_gold_mkt": 91.6,
    "total_ex_gold": 86.9,
-   "gold_rank": 23
+   "gold_rank": 24
   },
   {
    "iso3": "HKG",
@@ -313,7 +326,7 @@
    "gold_mkt_usd_bn": 0.3,
    "total_gold_mkt": 432.9,
    "total_ex_gold": 432.6,
-   "gold_rank": 24
+   "gold_rank": 25
   },
   {
    "iso3": "CHL",
@@ -326,7 +339,7 @@
    "gold_mkt_usd_bn": 0.0,
    "total_gold_mkt": 52.1,
    "total_ex_gold": 52.1,
-   "gold_rank": 25
+   "gold_rank": 26
   }
  ]
 }
