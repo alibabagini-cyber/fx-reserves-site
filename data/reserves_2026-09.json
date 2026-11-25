@@ -1,6 +1,6 @@
 {
  "period": "2026-09",
- "generated_at": "2026-11-24T09:10:21",
+ "generated_at": "2026-11-25T09:10:10",
  "note": "as_of<period 인 국가는 지연 보고(직전 월 값). 금은 시장가치(IMF 템플릿) — 한국은 장부가 보고.",
  "rows": [
   {
@@ -366,10 +366,10 @@
   {
    "iso3": "BEL",
    "name": "벨기에",
-   "usd_bn": 56.9,
-   "usd_exact": 56.9259,
-   "as_of": "2026-08",
-   "gold_usd_bn": 32.6,
+   "usd_bn": 54.7,
+   "usd_exact": 54.7447,
+   "as_of": "2026-09",
+   "gold_usd_bn": 30.6,
    "source": "IMF IRFCL",
    "rank": 37
   },
